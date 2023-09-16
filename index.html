@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logoW.png" alt="Logo" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Front-End Web Developer</p>
+          <h1>
+            Hi, I'm <span>Bruce</span> <br />
+            from Zimbabwe
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!-- about section -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="./images/profile.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              👋 Hello, I'm Bruce! I'm a software engineering undergrad with a
+              passion for crafting digital experiences. My journey in the world
+              of technology has led me to explore the realms of web development
+              and JavaScript, where I find joy in creating interactive and
+              user-friendly websites. In addition to web development, I also
+              have a keen interest in mobile app development, particularly with
+              C#. <br />
+              I believe in the power of technology to solve real-world problems
+              and enhance our daily lives. When I'm not coding, you can find me
+              exploring the latest trends in tech, experimenting with new coding
+              techniques, or simply enjoying a good cup of coffee. Join me on
+              this exciting journey of innovation and creativity. Let's turn
+              ideas into reality, one line of code at a time!
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="openTab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="openTab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="openTab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Web Development </span><br />Web app Development</li>
+                <li>
+                  <span>Graphics Designing </span><br />Desgning Logos, banners
+                  and fliers
+                </li>
+                <li>
+                  <span>App Development</span> <br />Building Android/iOS apps
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2020-Current </span><br />Open SOurce Contribution
+                </li>
+                <li><span>2018-2020 </span><br />FreeCodeCamp Challenges</li>
+                <li><span>2018</span> <br />Tech Journey Discovery</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2022 - Current </span><br />Bachelors Degree in Software
+                  Engineering at Harare Institute of Technology
+                </li>
+                <li><span>2023 </span><br />Online Graphics Desing Course</li>
+                <li><span>2015-2020</span> <br />High School</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var tabLinks = document.querySelectorAll(".tab-links");
+      var tabContents = document.querySelectorAll(".tab-contents");
+      function openTab(tabName) {
+        tabContents.forEach(function (el) {
+          el.classList.remove("active-tab");
+        });
+        tabLinks.forEach(function (el) {
+          el.classList.remove("active-link");
+        });
+        document.querySelector("#" + tabName).classList.add("active-tab");
+        event.currentTarget.classList.add("active-link");
+      }
+    </script>
+  </body>
+</html>
