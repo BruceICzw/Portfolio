@@ -210,7 +210,7 @@
             >
           </div>
           <div class="contact-right">
-            <form action="">
+            <form name="submit-to-google-sheet">
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
@@ -225,6 +225,7 @@
               ></textarea>
               <button type="submit" class="btn btn2">Submit</button>
             </form>
+            <span id="msg"></span>
           </div>
         </div>
       </div>
@@ -258,6 +259,25 @@
       function closeMenu() {
         sideMenu.style.right = "-200px";
       }
+    </script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzyrqvQWlPk8h9mJbRddlNWsXYz4VcP2juCO0RcFkfste2DD9NDOE1dquVNvbdHbONQ-Q/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.querySelector("#msg");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message Sent Successfully";
+            setTimeout(() => {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
     </script>
   </body>
 </html>
