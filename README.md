@@ -30,6 +30,8 @@ Technologies Used: HTML, CSS, JavaScript
 
 Repository Link: https://github.com/BruceIC/Quiz-App
 
+Demo: https://quizappbybruce.netlify.app/
+
 ### Project 2: Tic-Tac-Toe
 
 Description: A tic-tac-toe game
