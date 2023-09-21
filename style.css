@@ -22,7 +22,7 @@ body {
 #header {
   width: 100%;
   height: 100vh;
-  background-image: url(images/profileBg1.png);
+  background-image: url(images/InShot_20230920_151116546.png);
   background-size: cover;
   background-position: center;
 }
@@ -263,7 +263,7 @@ nav ul li a:hover:hover::after {
   display: block;
   margin: 50px auto;
   width: fit-content;
-  border: 1px solid var(--primary-color) f;
+  border: 1px solid var(--primary-color);
   padding: 14px 50px;
   border-radius: 6px;
   text-decoration: none;
