@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio</title>
+    <title>Chigwa Bruce</title>
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/d396be2d44.js"
@@ -66,6 +65,7 @@
       <div class="container">
         <nav>
           <img src="images/logoW.png" alt="Logo" class="logo" />
+          <h2>Bruce</h2>
           <ul id="side-menu">
             <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -82,6 +82,7 @@
             Hi, I'm <span>Bruce</span> <br />
             from Zimbabwe
           </h1>
+          <a href="#contact" class="btn btn2">Let's connect</a>
         </div>
       </div>
     </div>
@@ -90,7 +91,7 @@
       <div class="container">
         <div class="row">
           <div class="about-col-1">
-            <img src="./images/profile.png" />
+            <img src="./images/profile.png" alt="" />
           </div>
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
@@ -238,7 +239,7 @@
             </div>
           </div>
         </div>
-        <a href="https://github.com/BruceIC" target="_blank," class="btn"
+        <a href="https://github.com/BruceIC" target="_blank" class="btn"
           >See More</a
         >
       </div>
@@ -253,14 +254,16 @@
             <p><i class="fa-solid fa-paper-plane"></i>brucechigwa5@gmail.com</p>
             <p><i class="fa-solid fa-phone"></i>+263774230360</p>
             <div class="social-icons">
-              <a href="https://instagram.com/chigwa.bruce"
+              <a href="https://instagram.com/chigwa.bruce" target="_blank"
                 ><i class="fa-brands fa-instagram"></i
               ></a>
-              <a href="https://twitter.com/certi5d"
+              <a href="https://twitter.com/certi5d" target="_blank"
                 ><i class="fa-brands fa-twitter"></i
               ></a>
-              <a href=""><i class="fa-brands fa-linkedin"></i></a>
-              <a href="https://github.com/BruceICzw"
+              <a href="https://linkedin.com/chigwabruce" target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/BruceICzw" target="_blank"
                 ><i class="fa-brands fa-github"></i
               ></a>
             </div>
@@ -282,7 +285,9 @@
                 rows="6"
                 placeholder="Your Message"
               ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
+              <button type="submit" class="btn btn2" id="submit-btn">
+                Submit
+              </button>
             </form>
             <span id="msg"></span>
           </div>
@@ -325,7 +330,9 @@
         "https://script.google.com/macros/s/AKfycbzyrqvQWlPk8h9mJbRddlNWsXYz4VcP2juCO0RcFkfste2DD9NDOE1dquVNvbdHbONQ-Q/exec";
       const form = document.forms["submit-to-google-sheet"];
       const msg = document.querySelector("#msg");
+      const btn = document.querySelector("#submit-btn");
       form.addEventListener("submit", (e) => {
+        btn.styles.attributes.add("disabled");
         e.preventDefault();
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
@@ -333,6 +340,7 @@
             setTimeout(() => {
               msg.innerHTML = "";
             }, 5000);
+            btn.attributes.remove("disabled");
             form.reset();
           })
           .catch((error) => console.error("Error!", error.message));
