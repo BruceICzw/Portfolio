@@ -342,9 +342,7 @@
         "https://script.google.com/macros/s/AKfycbzyrqvQWlPk8h9mJbRddlNWsXYz4VcP2juCO0RcFkfste2DD9NDOE1dquVNvbdHbONQ-Q/exec";
       const form = document.forms["submit-to-google-sheet"];
       const msg = document.querySelector("#msg");
-      const btn = document.querySelector("#submit-btn");
       form.addEventListener("submit", (e) => {
-        btn.styles.attributes.add("disabled");
         e.preventDefault();
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
