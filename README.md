@@ -1,6 +1,6 @@
 # Bruce's Portfolio
 
-Welcome to my portfolio! This repository showcases my work and achievements as a software engineering undergraduate with a passion for web and mobile development, particularly in JavaScript and C#.
+Welcome to my portfolio, hosted at [chigwabruce.me](https://chigwabruce.me/) ! This repository showcases my work and achievements as a software engineering undergraduate with a passion for web and mobile development, particularly in JavaScript and C#.
 
 ## About Me
 
