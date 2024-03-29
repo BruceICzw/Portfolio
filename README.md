@@ -1,6 +1,6 @@
 # Bruce's Portfolio
 
-Welcome to my portfolio, hosted at [chigwabruce.me](https://chigwabruce.me/) ! This repository showcases my work and achievements as a software engineering undergraduate with a passion for web and mobile development, particularly in JavaScript and C#.
+Welcome to my portfolio, hosted at [chigwabruce.me](https://chigwabruce.me/) ! This repository showcases my work and achievements as a software engineering undergraduate with a passion for web and mobile development, particularly in JavaScript and Flutter.
 
 ## About Me
 
@@ -8,7 +8,7 @@ I am currently pursuing a degree in software engineering and am enthusiastic abo
 
 - Web Development
 - JavaScript Development
-- Mobile App Development with C#
+- Mobile App Development with Flutter.
 
 ## Projects
 
@@ -43,7 +43,7 @@ Repository Link: https://github.com/BruceIC/Tic-Tac-Toe
 ## Skills
 
 - **Web Development**: HTML, CSS, JavaScript, React
-- **Mobile App Development**: C#, Xamarin, Flutter.
+- **Mobile App Development**: Flutter.
 - **Graphics Designing**: Photoshop.
 ## Achievements
 - **freeCodeCamp Responsive Web Design**: https://freecodecamp.org/certification/bruceic/responsive-web-design
