@@ -42,7 +42,7 @@ Repository Link: https://github.com/BruceIC/Tic-Tac-Toe
 
 ## Skills
 
-- **Web Development**: HTML, CSS, JavaScript, React
+- **Web Development**: HTML, CSS, JavaScript, ReactJS. ExpressJS
 - **Mobile App Development**: Flutter.
 - **Graphics Designing**: Photoshop.
 ## Achievements
